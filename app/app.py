@@ -6,7 +6,7 @@ render_template,
 request,
 )
 
-from generatesecretkey import generatesecretkey
+from secretkeygenerator.secretkeygenerator import secretkeygenerator
 
 
 app=Flask(__name__)
@@ -14,7 +14,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def index():
-    secret_key=generatesecretkey()
+    secret_key=secretkeygenerator()
     return render_template('index.html', secret_key=secret_key)
 
 

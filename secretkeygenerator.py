@@ -16,14 +16,14 @@ def secretkeygenerator():
     secret_key=''.join(secret_key_list)
 
     with open('secretkey.txt', 'w') as secretkey:
-        secretkey.write('Secret key: {0}\n'.format(secret_key))
-
-    print(secret_key)
-
+        secretkey.write('Your secret key, also copied to your clipboard is: {0}\n'.format(secret_key))
+    
     clipboard.copy(secret_key) # pyperclip.copy(secret_key)
     secret_key_clip=clipboard.paste() # secret_key_clip=pyperclip.paste()
-
+    
+    print('Your secret key, also copied to your clipboard is: {0}'.format(secret_key))
+    
+    return secret_key
 
 if __name__=='__main__':
     secretkeygenerator()
-

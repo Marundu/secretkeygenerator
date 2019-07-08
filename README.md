@@ -11,3 +11,4 @@ An attendant Flask app. YAY!
 
 ### Additional Improvemements ###
 - Refresh only the div which displays the secret key - JavaScript implementation  
+- Write the secret key directly to a config file AND/ OR set it to `os.environ`  
